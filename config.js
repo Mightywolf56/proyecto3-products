@@ -1,10 +1,7 @@
-//! const dotenv = require('dotenv')
-//! dotenv.config()
-
 require('dotenv').config()
 
 const config = {
-  port: process.env.PORT || 5000,
+  PORT: process.env.PORT || 5000,
   nodeEnv: process.env.NODE_ENV || "dev", //? dev, prod, test
   db: {
     dev: {
@@ -44,7 +41,7 @@ const config = {
       dialect: "postgres",
       host: "localhost",
       port: 5432,
-      database: "users",
+      database: "products",
       username: "postgres",
       password: "root",
       //Extra configs

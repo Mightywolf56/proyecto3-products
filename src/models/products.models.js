@@ -1,4 +1,38 @@
-const Products = 'hola :D'
+const { DataType, DataTypes } = require('sequelize')
+const db = require('../utils/database')
+
+
+
+const Products = db.define('products', {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+    },
+
+    name: {
+        type: DataTypes.STRING,
+        allowNull: true
+        
+    },
+
+    description: {
+        type: DataTypes.TEXT,
+        allowNull: false        
+    },
+
+    price: {
+        type: DataTypes.FLOAT,
+        allowNull: false
+    },
+
+    stock: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    } 
+
+
+})
 
 module.exports = Products
 
